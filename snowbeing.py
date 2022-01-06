@@ -13,3 +13,14 @@ class Snowbeing:
     def hat(self):
         pygame.draw.rect(self.mainsurface, (0, 0, 0), (270, 5, 60, 60))
         pygame.draw.rect(self.mainsurface, (255, 0, 0), (250, 60, 100, 20))
+
+    def draw_snowflake(self, pos):
+        x = pos[0]
+        y = pos[1]
+        w = 15
+        width = 3
+        white = (255, 255, 2555)
+        pygame.draw.line(self.mainsurface, white, (x, y), (x + w, y + w), width)
+        pygame.draw.line(self.mainsurface, white, (x + w / 2, y), (x + w / 2, y + w), width)
+        pygame.draw.line(self.mainsurface, white, (x + w, y), (x, y + w), width)
+        pygame.draw.line(self.mainsurface, white, (x, y + w / 2), (x + w, y + w / 2), width)
